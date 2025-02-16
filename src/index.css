@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#1A1A1A] text-white;
+}
+
+/* Improved scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7C4DFF;
+  border-radius: 4px;
+  border: 2px solid #2A2A2A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B42E0;
+  border-color: #2A2A2A;
+}
+
+/* Focus styles for better accessibility */
+:focus-visible {
+  outline: 2px solid #7C4DFF;
+  outline-offset: 2px;
+}
+
+/* Ensure buttons are keyboard accessible */
+button:focus-visible {
+  @apply ring-2 ring-[#7C4DFF] ring-offset-2 ring-offset-[#1A1A1A];
+}
